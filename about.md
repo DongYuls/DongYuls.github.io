@@ -4,6 +4,10 @@ title: About
 permalink: /about/
 ---
 
-I am freelance developer. Currently doing more in backend, focused in Python and Django.
+Hi, I am Dong Yul Oh.
 
-email: agus[at]python.web.id
+Since 2018, I'm a M.S student at Seoul National University, South Korea
+
+My research interests are Computer-Assisted Diagnosis (CAD), Deep Learning, Statistical Validation.
+
+If you require further information, please email me by dongyul.oh@snu.ac.kr
