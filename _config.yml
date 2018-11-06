@@ -2,10 +2,10 @@ title: Dong Yul's Blog
 description: My Personal Blog
 author: Dong Yul Oh
 github: https://github.com/agusmakmun
-about: I am freelance developer. Currently doing more in backend, focused in Python and Django.
+about: A.I Researcher\nDepartment of Radiology at Seoul National University Bundang Hospital.
 disqus_shortname: stackproblems
 google_analytics: UA-XXXXXXXX-Y
-avatar_url: /static/img/avatar.jpg
+avatar_url: /static/img/my_avatar.png
 
 enableTags: true
 tagarray: []
@@ -16,8 +16,6 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-facebook
-      link: "#"
     - icon: fa-twitter
       link: "https://twitter.com/agusmakmun6"
     - icon: fa-linkedin
