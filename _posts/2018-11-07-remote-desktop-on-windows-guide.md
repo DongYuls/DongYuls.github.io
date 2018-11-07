@@ -16,6 +16,8 @@ This tutorial refers to <http://www.snoopybox.co.kr/1545>.
 
 TCP port 21 (by default) connects FTP servers to the internet. Since FTP servers carry numerous vulnerabilities such as anonymous authentication capabilities, directory traversals, remote-desktop service, and cross-site scripting, **TCP port 21 is fundamentally unsafe from the start**.
 
+<br/>
+
 #### 1. View/Edit the Registry
 
 We need to change this port number.
@@ -38,7 +40,7 @@ Now **you should allow this port number in the firewall setting** with advanced 
 
 <br/>
 
-#### Restart Remote Desktop Service
+#### 3. Restart Remote Desktop Service
 
 Type `services.msc` in Run dialog box and right-click `Remote Desktop Services - Restart`.  
 
@@ -50,7 +52,9 @@ Type `services.msc` in Run dialog box and right-click `Remote Desktop Services -
 
 Now all you have to do is to open `Start - Remote Desktop Connection` and type the IP address of your remote server **with its own FTP port number**, for example "123.456.78.90:2022".
 
-
+<br/>
 
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})
+
+<br/>
 

@@ -103,3 +103,10 @@ C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86
 ```
 
 6. Now install Matlab R2017a from https://kr.mathworks.com/downloads/web_downloads/. **Note that this tutorial has been verified only with "Visual Studio 2015 + Matlab R2017a + CUDA v8.0 + cuDNN 6.0"**
+
+<br/>
+
+[Go to the Home Page]({{ site.url }}{{ site.baseurl }})
+
+<br/>
+
