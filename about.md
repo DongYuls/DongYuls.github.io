@@ -10,7 +10,7 @@ Since 2018, I'm a M.S student at Seoul National University, Korea
 
 My research interests are Computer-Assisted Diagnosis (CAD), Deep Learning and Statistical Validation.
 
-If you require further information, please email me: dongyul.oh@snu.ac.kr
+If you require further information, please email me: <u>dongyul.oh@snu.ac.kr</u>
 
 ---
 
@@ -18,9 +18,9 @@ If you require further information, please email me: dongyul.oh@snu.ac.kr
 
 M.S) Interdisciplinary Program in Bioengineering, Seoul National University, Korea
 
-B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies (HUFS)
+B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies, Korea
 
-
+\
 
 **Experience**
 
