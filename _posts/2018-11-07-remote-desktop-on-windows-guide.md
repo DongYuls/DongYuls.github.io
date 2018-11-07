@@ -7,14 +7,14 @@ categories: [Tensorflow, Remote Desktop, Windows10, Guide]
 
 ---
 
-Last Modified: 2018.07.11
+Last Modified: 2018.11.07
 
 This tutorial refers to <http://www.snoopybox.co.kr/1545>.
 
 ---
 ### Port Setting
 
-TCP port 21 (by default) connects FTP servers to the internet. Since FTP servers carry numerous vulnerabilities such as anonymous authentication capabilities, directory traversals, remote-desktop service, and cross-site scripting, **TCP port 21 is fundamentally unsafe from the start**.
+RDP-TCP port (remote desktop port) connects FTP servers to the internet. Since FTP servers carry numerous vulnerabilities such as anonymous authentication capabilities, directory traversals, remote-desktop service, and cross-site scripting, **The default port number, 3389 is fundamentally unsafe from the start**.
 
 <br/>
 
@@ -46,7 +46,7 @@ Type `services.msc` in Run dialog box and right-click `Remote Desktop Services -
 
 ------
 
-
+<br/>
 
 ### Remote Desktop Service
 

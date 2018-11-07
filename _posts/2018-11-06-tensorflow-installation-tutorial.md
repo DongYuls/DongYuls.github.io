@@ -2,31 +2,85 @@
 layout: post
 title:  "Tensorflow Installation Tutorial"
 date:   2018-11-06 18:34:10 +0700
-categories: [Tutorial, Tensorflow, Installation, Guide]
+categories: [Tutorial, Tensorflow, Installation]
 ---
 
 ---
 
-Last Modified: 2018.05.28
+Last Modified: 2018.11.07
+This tutorial refers to https://www.tensorflow.org/install/gpu.
 
 ---
 ### NVIDIA Settings (Only GPU)
 
-1. Graphic Driver: `sudo apt-get install nvidia-381`  
-After installation, you can check your own graphic device through `nvidia-smi`
+TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a virtual environment with pyenv (Linux only) after installation of Tensorflow GPU. 
 
-2. CUDA Toolkit 8.0: [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) 
+#### Hardware Requirements
 
-3. cuDNN 6.0: [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn)
+- NVIDIA® GPU card with CUDA® Compute Capability >= 3.5. See the list of [CUDA-enabled GPU cards](https://developer.nvidia.com/cuda-gpus).
 
-After installation of cuDNN 6.0, move them into CUDA directory.  
-Windows 10: `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0`  
-Linux: `/usr/local/cuda`
+#### Software Requirements
 
-**Note that tensorflow 1.4.2 only supports CUDA v8.0 and cuDNN v6.0 (2017.12.27)**  
-Now tensorflow 1.8.0 supports CUDA v9.0 and cuDNN v7.0.5 (2018.05.29)  
+- NVIDIA® GPU drivers: CUDA 9.0 requires 384.x or higher.  
+- CUDA® Toolkit: TensorFlow supports CUDA 9.0.  
+- cuDNN SDK (>= 7.2)
+
+#### 1. Install CUDA
+
+##### (Option. 1) APT with Command Line
+For Ubuntu 16.04 and possibly other Debian-based Linux distros add the NVIDIA package repository and use `apt` to install CUDA.
+
+```
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+sudo apt install ./cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb
+sudo apt install ./nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb
+
+sudo apt update
+
+sudo apt install cuda9.0 cuda-cublas-9-0 cuda-cufft-9-0 cuda-curand-9-0 \
+    cuda-cusolver-9-0 cuda-cusparse-9-0 libcudnn7=7.2.1.38-1+cuda9.0 \
+    libnccl2=2.2.13-1+cuda9.0 cuda-command-line-tools-9-0
+```
+
+##### (Option. 2) Manually Download
+
+Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and see the **legacy releases**.
+
+- Install CUDA Toolkit 9.0 clicking the green button that describe your computer platform.
+
+- You must download the base installer, and the other pathces are optional.
+
+- After installation, type the following instruction with Command Line:
+
+  ```
+  sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
+  sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+  sudo apt-get update
+  sudo apt-get install cuda
+  ```
+
+<br/>
+
+#### 2. Install cuDNN 6.0
+
+Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) and download cuDNN 7.3.1 **Library for Linux** (matching CUDA 9.0 which you have just downloaded in step1).
+- After installation of cuDNN, unzip it with `tar -xzvf [cuDNN filename]` 
+
+- Copy them (header files) into CUDA directory (the directory path may differ according to CUDA version):
+
+  ```
+  sudo cp cuda/include/cudnn.h /usr/local/cuda-9.0/include/ 
+  sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/ 
+  ```
+
+  Note:  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0" (Windows10)
 
 ---
+<br/>
+
 ### Build Python Environment
 
 If you are using Window 10, you should install Microsoft Visual C++ 2015 Redistributable Package.  
