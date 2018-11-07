@@ -33,7 +33,6 @@ TensorFlow GPU support requires an assortment of drivers and libraries. To avoid
 ##### (Option. 1) APT with Command Line
 For Ubuntu 16.04 and possibly other Debian-based Linux add the NVIDIA package repository and use `apt` to install CUDA. Installation instructions can be found in <https://www.tensorflow.org/install/gpu>.  
 
-<br/>
 ##### (Option. 2) Manually Download
 
 Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and see the **legacy releases**.
@@ -77,11 +76,15 @@ Naive Python: [https://www.python.org/](https://www.python.org/)
 In Linux, you must take the following steps:
 
 #### 1. Install Packages and Dependencies (.pyenv)   
-`sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev` `sudo apt-get install libreadline-dev libsqlite3-dev wget curl llvm`
+`sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev` `sudo apt-get install libreadline-dev libsqlite3-dev wget curl llvm ` 
+
+<br/>
 
 #### 2. Install Pyenv from Git  
 `sudo apt-get install git`  
 `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
+
+<br/>
 
 #### 3. View/Edit .profile
 
@@ -91,10 +94,15 @@ After installation, add several script shown below into ".profile", which is loc
 export PATH="$HOME/.pyenv/bin:$PATH"  
 eval "$(pyenv init -)"  
 eval "$(pyenv virtualenv-init -)"  
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/  
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 ```
+<br/>
+
 #### 4. Reboot or logout  
-`sudo reboot` or `logout`
+
+`sudo reboot` or `logout`  
+
+<br/>
 
 #### 5. Install python 3.n  
 `pyenv install 3.5.2`  
