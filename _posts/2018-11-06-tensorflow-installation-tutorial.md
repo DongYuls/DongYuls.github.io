@@ -82,7 +82,7 @@ In Linux, you must take the following steps:
 <br/>
 
 #### 2. Install Pyenv from Git  
-Pyenv is a very simple python version management tool that lets you easily switch between multiple versions of Python. It works like a virtualenv, using UNIX tradition of single-purpose tools that do one thing well.
+Pyenv is a very simple python **version management tool** that lets you easily switch between multiple versions of Python. It works like a virtualenv, using UNIX tradition of single-purpose tools that do one thing well.
 `sudo apt-get install git`  
 `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
 Further information can be found in <https://github.com/pyenv/pyenv>.
@@ -91,7 +91,8 @@ Further information can be found in <https://github.com/pyenv/pyenv>.
 
 #### 3. View/Edit Bash Profile
 Pyenv intercepts Python commands using shim executables injected into your PATH, determines which Python version has been specified by your application, and passes your commands along to the correct Python installation.  
-Therefore you need to add several script shown below into ".profile", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
+Therefore you need to add several script shown below into "**.profile**", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
+
 ```
 export PATH="$HOME/.pyenv/bin:$PATH"  
 eval "$(pyenv init -)"  
@@ -137,7 +138,7 @@ Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visu
 
 Make sure that Visual C++ and Windows10 SDK have been installed.  
 
-- Run Visual Studio 2015 installer again and check the following items.   
+- **Run Visual Studio 2015 installer again** and check the following items.   
   `Programming Language - Visual C++`  
   `Universal Tools for Windows Apps (Check All)`  
 
