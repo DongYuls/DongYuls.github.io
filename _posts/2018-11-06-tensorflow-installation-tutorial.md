@@ -89,8 +89,8 @@ Further information can be found in <https://github.com/pyenv/pyenv>.
 
 <br/>
 
-#### 3. View/Edit .profile
-At a high level, pyenv intercepts Python commands using shim executables injected into your PATH, determines which Python version has been specified by your application, and passes your commands along to the correct Python installation.  
+#### 3. View/Edit Bash Profile
+Pyenv intercepts Python commands using shim executables injected into your PATH, determines which Python version has been specified by your application, and passes your commands along to the correct Python installation.  
 Therefore you need to add several script shown below into ".profile", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
 ```
 export PATH="$HOME/.pyenv/bin:$PATH"  
@@ -174,6 +174,8 @@ C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86
 <br/>
 
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})
+
+Further Information: <dongyul.oh@snu.ac.kr>
 
 <br/>
 
