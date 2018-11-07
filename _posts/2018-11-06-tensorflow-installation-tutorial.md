@@ -13,9 +13,7 @@ This tutorial refers to <https://www.tensorflow.org/install>.
 ---
 ### NVIDIA Settings (Only GPU)
 
-TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a **virtual environment with pyenv** (Linux only) after installation of Tensorflow GPU. 
-
-<br/>
+TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a **virtual environment with pyenv** (Linux only) after installation of Tensorflow GPU.  
 
 #### Hardware Requirements
 
@@ -25,14 +23,14 @@ TensorFlow GPU support requires an assortment of drivers and libraries. To avoid
 
 - NVIDIA® GPU drivers: CUDA 9.0 requires 384.x or higher.  
 - CUDA® Toolkit: TensorFlow supports CUDA 9.0.  
-- cuDNN SDK (>= 7.2)
-<br/>
+- cuDNN SDK (>= 7.2)  
+
 #### 1. Install CUDA
 
 ##### (Option. 1) APT with Command Line
-For Ubuntu 16.04 and possibly other Debian-based Linux add the NVIDIA package repository and use `apt` to install CUDA. Installation instructions can be found in <https://www.tensorflow.org/install/gpu>. 
-<br/>
+For Ubuntu 16.04 and possibly other Debian-based Linux add the NVIDIA package repository and use `apt` to install CUDA. Installation instructions can be found in <https://www.tensorflow.org/install/gpu>.  
 
+<br/>
 ##### (Option. 2) Manually Download
 
 Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and see the **legacy releases**.
@@ -42,15 +40,12 @@ Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com
 - You must download the base installer, and the other pathces are optional.
 
 - After installation, type the following instruction with Command Line:
-
-  ```
-  sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
-  sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
-  sudo apt-get update
-  sudo apt-get install cuda
-  ```
-
-  Note: CUDA Toolkit for Windows10 will automatically install CUDA driver and tools needed to create, build and run a CUDA application as well as libraries, header files, CUDA samples source code, and other resources.
+  `sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb`  
+  `sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub`  
+  `sudo apt-get update`  
+  `sudo apt-get install cuda`  
+  
+  Note: CUDA Toolkit for Windows10 will automatically install CUDA driver and tools needed to create, build and run its application as well as libraries, header files, CUDA samples source code, and other resources.
 
 <br/>
 
@@ -59,12 +54,11 @@ Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com
 Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) and download cuDNN 7.3.1 **Library for Linux** (matching CUDA 9.0 which you have just downloaded in step1).
 - After installation of cuDNN archive, unzip it with `tar -xzvf [cuDNN filename]` 
 
-- Copy them (header files) into CUDA directory (the directory path may differ according to CUDA version):
+- Copy them (header files) into CUDA directory (the directory path may differ according to CUDA version):  
 
-  ```
-  sudo cp cuda/include/cudnn.h /usr/local/cuda-9.0/include/ 
-  sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/ 
-  ```
+  `sudo cp cuda/include/cudnn.h /usr/local/cuda-9.0/include/`  
+  `sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/`  
+
 
   Note:  CUDA directory path for Windows10 is referred as `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0`
 
@@ -102,15 +96,21 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 
 ---
 <br/>
+
 ### Install Tensorflow
 
 `pip install tensorflow-gpu` or `pip install tensorflow`
 
 ---
 
+<br/>
+
 ### Build Matlab Environment
 
-Dependencies
+This tutorial is only validated in cuda9.0, cudnn7.3.0 and matlab 2017a environments, so you can not guarantee a normal installation if you use any of them.
+
+#### Dependencies
+
 - CUDA v8.0 with cuDNN 6.0
 - Microsoft Visual Studio 2015 (Visual C++)
 
