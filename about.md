@@ -20,6 +20,8 @@ M.S) Interdisciplinary Program in Bioengineering, Seoul National University, Kor
 
 B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies, Korea  
 
+<br/>
+
 
 **Experience**
 
