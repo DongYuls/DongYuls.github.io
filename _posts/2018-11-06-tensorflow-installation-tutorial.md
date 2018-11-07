@@ -7,13 +7,15 @@ categories: [Tutorial, Tensorflow, Installation]
 
 ---
 
-Last Modified: 2018.11.07
-This tutorial refers to https://www.tensorflow.org/install/gpu.
+Last Modified: 2018.11.07  
+This tutorial refers to <https://www.tensorflow.org/install>.
 
 ---
 ### NVIDIA Settings (Only GPU)
 
-TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a virtual environment with pyenv (Linux only) after installation of Tensorflow GPU. 
+TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a **virtual environment with pyenv** (Linux only) after installation of Tensorflow GPU. 
+
+<br/>
 
 #### Hardware Requirements
 
@@ -24,26 +26,12 @@ TensorFlow GPU support requires an assortment of drivers and libraries. To avoid
 - NVIDIA® GPU drivers: CUDA 9.0 requires 384.x or higher.  
 - CUDA® Toolkit: TensorFlow supports CUDA 9.0.  
 - cuDNN SDK (>= 7.2)
-
+<br/>
 #### 1. Install CUDA
 
 ##### (Option. 1) APT with Command Line
-For Ubuntu 16.04 and possibly other Debian-based Linux distros add the NVIDIA package repository and use `apt` to install CUDA.
-
-```
-sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-sudo apt install ./cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-
-wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb
-sudo apt install ./nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb
-
-sudo apt update
-
-sudo apt install cuda9.0 cuda-cublas-9-0 cuda-cufft-9-0 cuda-curand-9-0 \
-    cuda-cusolver-9-0 cuda-cusparse-9-0 libcudnn7=7.2.1.38-1+cuda9.0 \
-    libnccl2=2.2.13-1+cuda9.0 cuda-command-line-tools-9-0
-```
+For Ubuntu 16.04 and possibly other Debian-based Linux add the NVIDIA package repository and use `apt` to install CUDA. Installation instructions can be found in <https://www.tensorflow.org/install/gpu>. 
+<br/>
 
 ##### (Option. 2) Manually Download
 
@@ -62,12 +50,14 @@ Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com
   sudo apt-get install cuda
   ```
 
+  Note: CUDA Toolkit for Windows10 will automatically install CUDA driver and tools needed to create, build and run a CUDA application as well as libraries, header files, CUDA samples source code, and other resources.
+
 <br/>
 
 #### 2. Install cuDNN 6.0
 
 Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) and download cuDNN 7.3.1 **Library for Linux** (matching CUDA 9.0 which you have just downloaded in step1).
-- After installation of cuDNN, unzip it with `tar -xzvf [cuDNN filename]` 
+- After installation of cuDNN archive, unzip it with `tar -xzvf [cuDNN filename]` 
 
 - Copy them (header files) into CUDA directory (the directory path may differ according to CUDA version):
 
@@ -76,7 +66,7 @@ Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) a
   sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/ 
   ```
 
-  Note:  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0" (Windows10)
+  Note:  CUDA directory path for Windows10 is referred as `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0`
 
 ---
 <br/>
@@ -87,35 +77,31 @@ If you are using Window 10, you should install Microsoft Visual C++ 2015 Redistr
 Download: [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)  
 Naive Python: [https://www.python.org/](https://www.python.org/)
 
-In Linux, you must do following steps:
+In Linux, you must take the following steps:
 
-1. Install packages and dependencies (.pyenv)  
-`sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm`
-
-2. Install pyenv from git  
-`sudo apt-get install git`  
-`curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
-
-3. After installation, you should add several script (shown below) into ".profile", which is located in your home directory.  
-`sudo apt install vim`  
-`vim .profile`  
-...  
-```html
+- Install packages and dependencies (.pyenv)   
+  `sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev` `sudo apt-get install libreadline-dev libsqlite3-dev wget curl llvm`
+- Install pyenv from git  
+  `sudo apt-get install git`  
+  `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
+- After installation, add several script (shown below) into ".profile", which is located in your home directory. The editor (e.g. nano, vi, vim) does not matter.  
+  `vim .profile` 
+```
 export PATH="$HOME/.pyenv/bin:$PATH"  
 eval "$(pyenv init -)"  
 eval "$(pyenv virtualenv-init -)"  
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/  
 ```
-
-4. Reboot or logout  
+- Reboot or logout
 `sudo reboot` or `logout`
 
-5. Install python 3.n  
+- Install python 3.n  
 `pyenv install 3.5.2`  
 `pyenv versions`  
 `pyenv global 3.5.2`  
 
 ---
+<br/>
 ### Install Tensorflow
 
 `pip install tensorflow-gpu` or `pip install tensorflow`
