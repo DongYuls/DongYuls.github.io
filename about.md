@@ -18,9 +18,8 @@ If you require further information, please email me: <u>dongyul.oh@snu.ac.kr</u>
 
 M.S) Interdisciplinary Program in Bioengineering, Seoul National University, Korea
 
-B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies, Korea
+B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies, Korea  
 
-\
 
 **Experience**
 
@@ -29,6 +28,4 @@ AI Researcher, Department of Radiology, Seoul National University Bundang Hospit
 Research Intern, W-Research, Naver Webtoon Corporation, Korea (2018.07-2018.08)
 
 Research Student Intern, Music and Audio Reasearch Group, Seoul National University, Korea (2017.07-2017.11)
-
----
 
