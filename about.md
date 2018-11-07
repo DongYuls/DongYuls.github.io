@@ -6,25 +6,29 @@ permalink: /about/
 
 Hi, I am Dong Yul Oh.
 
-Since 2018, I'm a M.S student at Seoul National University, South Korea
+Since 2018, I'm a M.S student at Seoul National University, Korea
 
-My research interests are Computer-Assisted Diagnosis (CAD), Deep Learning, Statistical Validation.
+My research interests are Computer-Assisted Diagnosis (CAD), Deep Learning and Statistical Validation.
 
 If you require further information, please email me: dongyul.oh@snu.ac.kr
 
 ---
 
-- MS) Interdisciplinary Program of Bioengineering
-  Seoul National University
+**Education**
 
-- Research Intern / W-Research (Artificial Intelligence)  
-  Naver Webtoon Corporation
+M.S) Interdisciplinary Program in Bioengineering, Seoul National University, Korea
 
-- Artificial Intelligence Researcher / Department of Radiology  
-  Seoul National University Bundang Hospital
+B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies (HUFS)
 
-- Research Student Intern / Graduate School of Convergence Science and Technology  
-  Seoul National University
-  
-- BS) Department of Digital Information Engineering  
-  Hankuk University of Foreign Studies (HUFS)
+
+
+**Experience**
+
+AI Researcher, Department of Radiology, Seoul National University Bundang Hospital, Korea (2017.11-Present)
+
+Research Intern, W-Research, Naver Webtoon Corporation, Korea (2018.07-2018.08)
+
+Research Student Intern, Music and Audio Reasearch Group, Seoul National University, Korea (2017.07-2017.11)
+
+---
+
