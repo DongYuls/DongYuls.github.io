@@ -20,17 +20,17 @@ TCP port 21 (by default) connects FTP servers to the internet. Since FTP servers
 
 #### 1. View/Edit the Registry
 
-We need to change this port number.
+Make the computer to use different port number (skip this if you don't mind the security issue).
 
 - Type `regedit` in Run dialog box to directly open the Registry Editor.
-- You can change the default TCP port number in the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`.
+- You can change the default TCP port number (`PortNumber`) in the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`.
 - Change the base setting (default=3389) as a decimal number such as 2022.
 
 <br/>
 
 #### 2. Open a Specific Port in Firewall
 
-Now **you should allow this port number in the firewall setting** with advanced security. Type `wf.msc` in Run dialog box, and click `Advanced settings` on the left-side panel. Then open `Inbound Rules - New Rule` and take the following steps.
+**You should allow this port number in the firewall setting** with advanced security. Type `wf.msc` in Run dialog box, and click `Advanced settings` on the left-side panel. Then open `Inbound Rules - New Rule` and take the following steps.
 
 - Rule Type: Select the rule type **Port**.
 - Protocol and Ports: In the New Inbound Rule Wizard dialog, leave **TCP** selected, and enter port number that you have set in the Registry Editor (see step1) such as 2022.
