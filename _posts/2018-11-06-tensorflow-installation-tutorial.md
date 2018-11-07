@@ -14,6 +14,7 @@ This tutorial refers to <https://www.tensorflow.org/install>.
 ### NVIDIA Settings (Only GPU)
 
 TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a **virtual environment with pyenv** (Linux only) after installation of Tensorflow GPU.  
+<br/>
 
 #### Hardware Requirements
 
@@ -24,6 +25,8 @@ TensorFlow GPU support requires an assortment of drivers and libraries. To avoid
 - NVIDIA® GPU drivers: CUDA 9.0 requires 384.x or higher.  
 - CUDA® Toolkit: TensorFlow supports CUDA 9.0.  
 - cuDNN SDK (>= 7.2)  
+
+<br/>
 
 #### 1. Install CUDA
 
@@ -60,7 +63,7 @@ Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) a
   `sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/`  
 
 
-  Note:  CUDA directory path for Windows10 is referred as `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0`
+  Note:  CUDA directory path for Windows10 is referred as "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0".
 
 ---
 <br/>
@@ -73,25 +76,29 @@ Naive Python: [https://www.python.org/](https://www.python.org/)
 
 In Linux, you must take the following steps:
 
-- Install packages and dependencies (.pyenv)   
-  `sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev` `sudo apt-get install libreadline-dev libsqlite3-dev wget curl llvm`
-- Install pyenv from git  
-  `sudo apt-get install git`  
-  `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
-- After installation, add several script (shown below) into ".profile", which is located in your home directory. The editor (e.g. nano, vi, vim) does not matter.  
-  `vim .profile` 
+#### 1. Install Packages and Dependencies (.pyenv)   
+`sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev` `sudo apt-get install libreadline-dev libsqlite3-dev wget curl llvm`
+
+#### 2. Install Pyenv from Git  
+`sudo apt-get install git`  
+`curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
+
+#### 3. View/Edit .profile
+
+After installation, add several script shown below into ".profile", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
+
 ```
 export PATH="$HOME/.pyenv/bin:$PATH"  
 eval "$(pyenv init -)"  
 eval "$(pyenv virtualenv-init -)"  
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/  
 ```
-- Reboot or logout
+#### 4. Reboot or logout  
 `sudo reboot` or `logout`
 
-- Install python 3.n  
+#### 5. Install python 3.n  
 `pyenv install 3.5.2`  
-`pyenv versions`  
+`pyenv versions` to list python versions that you have  
 `pyenv global 3.5.2`  
 
 ---
@@ -99,7 +106,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 
 ### Install Tensorflow
 
-`pip install tensorflow-gpu` or `pip install tensorflow`
+`pip install tensorflow-gpu` (if gpu is available) or `pip install tensorflow`
 
 ---
 
@@ -107,29 +114,46 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 
 ### Build Matlab Environment
 
-This tutorial is only validated in cuda9.0, cudnn7.3.0 and matlab 2017a environments, so you can not guarantee a normal installation if you use any of them.
+This tutorial is only validated with the following dependencies.
 
 #### Dependencies
 
 - CUDA v8.0 with cuDNN 6.0
 - Microsoft Visual Studio 2015 (Visual C++)
+- Matlab R2017a from <https://kr.mathworks.com/downloads/web_downloads/>
 
-1. First of all, you need C/C\++ compiler such as Visual C\++ or MinGW. However, matconvnet which is a library for building convolution neural network, currently only supports Visual C\++.  
-    Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visualstudio.com/ko/vs/older-downloads/)  
-2. After installation, make sure that Visual C++ and Windows10 SDK have been installed.  
-    Run Visual Studio 2015 installer again and check the following items.   
-    `Programming Language - Visual C++`  
-    `Universal Tools for Windows Apps (Check All)`
+<br/>
 
-3. Reboot the system  
-4. Make new user environment variable path so that matlab can locate the complier.
+#### 1. Install Visual Studio 2010
+
+First of all, you need C/C\++ compiler such as Visual C\++ or MinGW. However, matconvnet which is a library for building convolution neural network, currently only supports Visual C\++.  
+Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visualstudio.com/ko/vs/older-downloads/).  
+
+<br/>
+
+#### 2. Install Visual C++ and Windows10 SDK
+
+After installation, make sure that Visual C++ and Windows10 SDK have been installed.  
+Run Visual Studio 2015 installer again and check the following items.   
+`Programming Language - Visual C++`  
+`Universal Tools for Windows Apps (Check All)`  
+
+Reboot the system.  
+
+<br/>
+
+#### 3. Environment Variable Setting
+
+Make new user environment variable path so that matlab can locate the complier.
+
 ```
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools
 ```
 
-5. Make new system environment variable path named *include* and *LIB*, respectively, to link basic header files for C++ compiler.
+Make new system environment variable path named **include** and **LIB**, respectively, in order to link the basic header files for C++ compiler.
+
 ```
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include
@@ -142,7 +166,7 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\x86
 C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86
 ```
 
-6. Now install Matlab R2017a from https://kr.mathworks.com/downloads/web_downloads/. **Note that this tutorial has been verified only with "Visual Studio 2015 + Matlab R2017a + CUDA v8.0 + cuDNN 6.0"**
+
 
 <br/>
 
