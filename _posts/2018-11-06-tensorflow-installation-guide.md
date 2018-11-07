@@ -2,7 +2,7 @@
 layout: post
 title:  "Tensorflow Installation Tutorial"
 date:   2018-11-06 18:34:10 +0700
-categories: [Tensorflow, Installation, Tutorial, Getting Started]
+categories: [Tutorial, Tensorflow, Installation, Guide]
 ---
 
 ---
@@ -75,11 +75,11 @@ Dependencies
 - Microsoft Visual Studio 2015 (Visual C++)
 
 1. First of all, you need C/C\++ compiler such as Visual C\++ or MinGW. However, matconvnet which is a library for building convolution neural network, currently only supports Visual C\++.  
-  Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visualstudio.com/ko/vs/older-downloads/)  
+    Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visualstudio.com/ko/vs/older-downloads/)  
 2. After installation, make sure that Visual C++ and Windows10 SDK have been installed.  
-  Run Visual Studio 2015 installer again and check the following items.   
-  `Programming Language - Visual C++`  
-  `Universal Tools for Windows Apps (Check All)`
+    Run Visual Studio 2015 installer again and check the following items.   
+    `Programming Language - Visual C++`  
+    `Universal Tools for Windows Apps (Check All)`
 
 3. Reboot the system  
 4. Make new user environment variable path so that matlab can locate the complier.
