@@ -92,22 +92,16 @@ Further information can be found in <https://github.com/pyenv/pyenv>.
 #### 3. View/Edit .profile
 At a high level, pyenv intercepts Python commands using shim executables injected into your PATH, determines which Python version has been specified by your application, and passes your commands along to the correct Python installation.  
 Therefore you need to add several script shown below into ".profile", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
-
 ```
 export PATH="$HOME/.pyenv/bin:$PATH"  
 eval "$(pyenv init -)"  
 eval "$(pyenv virtualenv-init -)"  
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 ```
+After editing .profile, reboot the system or logout.  
 <br/>
 
-#### 4. Reboot or logout  
-
-`sudo reboot` or `logout`  
-
-<br/>
-
-#### 5. Install python 3.n  
+#### 4. Install python 3.n  
 `pyenv install 3.5.2`  
 `pyenv versions` to list python versions that you have  
 `pyenv global 3.5.2`  
@@ -126,9 +120,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 ### Build Matlab Environment
 
 This tutorial is only validated with the following dependencies.
-
-#### Dependencies
-
 - CUDA v8.0 with cuDNN 6.0
 - Microsoft Visual Studio 2015 (Visual C++)
 - Matlab R2017a from <https://kr.mathworks.com/downloads/web_downloads/>
