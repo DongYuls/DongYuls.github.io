@@ -25,7 +25,7 @@ B.S) Department of Digital Information Engineering, Hankuk University of Foreign
 
 **Experience**
 
-AI Researcher, Department of Radiology, Seoul National University Bundang Hospital, Korea (2017.11-Present)
+A.I Researcher, Department of Radiology, Seoul National University Bundang Hospital, Korea (2017.11-Present)
 
 Research Intern, W-Research, Naver Webtoon Corporation, Korea (2018.07-2018.08)
 
