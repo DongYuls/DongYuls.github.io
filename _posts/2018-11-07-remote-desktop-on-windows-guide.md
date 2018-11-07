@@ -56,5 +56,7 @@ Now all you have to do is to open `Start - Remote Desktop Connection` and type t
 
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})
 
+Further Information: <dongyul.oh@snu.ac.kr>
+
 <br/>
 
