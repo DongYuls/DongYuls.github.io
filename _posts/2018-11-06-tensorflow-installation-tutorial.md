@@ -62,7 +62,7 @@ Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) a
   `sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/`  
 
 
-  Note:  CUDA directory path for Windows10 is referred as "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0".
+  Note:  CUDA directory path for Windows10 is referred as "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0". Be cautious not to have multiple versions of CUDA.
 
 ---
 <br/>
@@ -71,7 +71,8 @@ Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) a
 
 If you are using Window 10, you should install Microsoft Visual C++ 2015 Redistributable Package.  
 Download: [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)  
-Naive Python: [https://www.python.org/](https://www.python.org/)
+Naive Python: [https://www.python.org/](https://www.python.org/)  
+<br/>
 
 In Linux, you must take the following steps:
 
@@ -81,14 +82,16 @@ In Linux, you must take the following steps:
 <br/>
 
 #### 2. Install Pyenv from Git  
+Pyenv is a very simple python version management tool that lets you easily switch between multiple versions of Python. It works like a virtualenv, using UNIX tradition of single-purpose tools that do one thing well.
 `sudo apt-get install git`  
 `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
+Further information can be found in <https://github.com/pyenv/pyenv>.
 
 <br/>
 
 #### 3. View/Edit .profile
-
-After installation, add several script shown below into ".profile", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
+At a high level, pyenv intercepts Python commands using shim executables injected into your PATH, determines which Python version has been specified by your application, and passes your commands along to the correct Python installation.  
+Therefore you need to add several script shown below into ".profile", which is located in your home directory. Here the editor (e.g. nano, vi, vim) does not matter.  
 
 ```
 export PATH="$HOME/.pyenv/bin:$PATH"  
@@ -141,12 +144,13 @@ Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visu
 
 #### 2. Install Visual C++ and Windows10 SDK
 
-After installation, make sure that Visual C++ and Windows10 SDK have been installed.  
-Run Visual Studio 2015 installer again and check the following items.   
-`Programming Language - Visual C++`  
-`Universal Tools for Windows Apps (Check All)`  
+Make sure that Visual C++ and Windows10 SDK have been installed.  
 
-Reboot the system.  
+- Run Visual Studio 2015 installer again and check the following items.   
+  `Programming Language - Visual C++`  
+  `Universal Tools for Windows Apps (Check All)`  
+
+- After installation, reboot the system.  
 
 <br/>
 
