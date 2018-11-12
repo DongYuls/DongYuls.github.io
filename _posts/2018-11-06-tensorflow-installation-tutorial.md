@@ -62,7 +62,7 @@ Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) a
   `sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/`  
 
 
-  Note: CUDA path and the environmental variable settings for Windows10 are different. See [Windows Setup](https://www.tensorflow.org/install/gpu). Be cautious not to have multiple versions of CUDA.
+  Note: CUDA path and the environmental variable settings for Windows10 are different. See [Windows Setup](https://www.tensorflow.org/install/gpu).
 
 ---
 <br/>
@@ -82,7 +82,7 @@ In Linux, you must take the following steps:
 <br/>
 
 #### 2. Install Pyenv from Git  
-Pyenv is a very simple python **version management tool** that lets you easily switch between multiple versions of Python. It works like a virtualenv, using UNIX tradition of single-purpose tools that do one thing well.
+Pyenv is a very simple python **version management tool** that lets you easily switch between multiple versions of python. It works like a virtualenv, using UNIX tradition of single-purpose tools that do one thing well.
 `sudo apt-get install git`  
 `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
 Further information can be found in <https://github.com/pyenv/pyenv>.
