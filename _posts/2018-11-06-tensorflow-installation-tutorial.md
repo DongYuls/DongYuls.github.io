@@ -35,7 +35,7 @@ For Ubuntu 16.04 and possibly other Debian-based Linux add the NVIDIA package re
 
 ##### Option 2. Manually Download (Recommended)
 
-Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and see the **legacy releases**. Be cautious not to have multiple versions of CUDA.
+Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and see the **legacy releases**. In this step, be cautious not to have multiple versions of CUDA.
 
 - Install CUDA Toolkit 9.0 by clicking the green button that describe your computer platform.
 
@@ -62,7 +62,7 @@ Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) a
   `sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/`  
 
 
-  Note: CUDA directory path and the environmental variable setting for Windows10 are different. See [Windows Setup](https://www.tensorflow.org/install/gpu).
+  Note: CUDA path and the environmental variable settings for Windows10 are different. See [Windows Setup](https://www.tensorflow.org/install/gpu).
 
 ---
 <br/>
@@ -111,8 +111,8 @@ After editing .profile, reboot the system or logout.
 <br/>
 
 ### Install Tensorflow
-
-`pip install tensorflow-gpu` (if gpu is available) or `pip install tensorflow`
+Current release: `pip install tensorflow-gpu`
+Legacy release: `pip install tensorflow-gpu==<version>`
 
 ---
 
