@@ -30,14 +30,14 @@ TensorFlow GPU support requires an assortment of drivers and libraries. To avoid
 
 #### 1. Install CUDA
 
-##### (Option. 1) APT with Command Line
+##### (Option 1) APT with Command Line
 For Ubuntu 16.04 and possibly other Debian-based Linux add the NVIDIA package repository and use `apt` to install CUDA. Installation instructions can be found in <https://www.tensorflow.org/install/gpu>.  
 
-##### (Option. 2) Manually Download
+##### (Option 2) Manually Download
 
 Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and see the **legacy releases**.
 
-- Install CUDA Toolkit 9.0 clicking the green button that describe your computer platform.
+- Install CUDA Toolkit 9.0 by clicking the green button that describe your computer platform.
 
 - You must download the base installer, and the other pathces are optional.
 
@@ -51,9 +51,9 @@ Go to [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com
 
 <br/>
 
-#### 2. Install cuDNN 6.0
+#### 2. Install cuDNN
 
-Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) and download cuDNN 7.3.1 **Library for Linux** (matching CUDA 9.0 which you have just downloaded in step1).
+Go to [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn) and download cuDNN 7.3.1 **Library for Linux** (matching CUDA 9.0 which you have already downloaded in the previous step).
 - After installation of cuDNN archive, unzip it with `tar -xzvf [cuDNN filename]` 
 
 - Copy them (header files) into CUDA directory (the directory path may differ according to CUDA version):  
