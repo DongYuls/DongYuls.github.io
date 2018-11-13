@@ -1,11 +1,11 @@
 [
 	{
-		"slug": "cool-project",
-		"name": "Cool project 1",
-		"image": "placeholder.jpg",
-		"url": "https://www.google.com",
-		"date": "Jan 2014",
-		"tags": ["Angular JS","API"]
+		"slug": "anomaly-detection",
+		"name": "Anomaly Detection on SMD Machine Sound",
+		"image": "smd_machine.PNG",
+		"url": "#",
+		"date": "March 2018",
+		"tags": ["SMD", "Machine Sound", "Anomaly Detection"]
 	},
 	{
 		"name": "Cool project 2",
