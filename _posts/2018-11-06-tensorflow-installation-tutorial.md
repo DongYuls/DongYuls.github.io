@@ -103,9 +103,9 @@ After editing .profile, reboot the system or logout.
 <br/>
 
 #### 4. Install python 3.n  
-`pyenv install 3.5.2`  
-`pyenv versions` to list python versions that you have  
-`pyenv global 3.5.2`  
+`pyenv install 3.6.6` (to undo: `pyenv uninstall 3.6.6`) 
+`pyenv versions` to list python versions that you have.  
+`pyenv global 3.6.6`  
 
 ---
 <br/>
