@@ -15,8 +15,6 @@ This is my custom library (tensorflow wrapper) documentation. All the classes an
 
 ### tf_utils.tensorboard.Tensorboard
 
-Defined in `tensorflow_utils/tensorboard.py`.  
-
 TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).  
 
 **\_\_init\_\_**
@@ -28,7 +26,7 @@ __init__(
 )
 ```
 
-Contstructs a `Tensorboard` instance, which is a suite of visualization tools for TensorFlow training framework (e.g. loss graph, embeddings).
+Contstructs a `Tensorboard` instance, which is a suite of visualization tools for TensorFlow training framework (e.g. loss graph, embeddings). Defined in `tensorflow_utils/tensorboard.py`.
 
 Args:  
 
@@ -102,7 +100,7 @@ add_summary(
 )
 ```
 
-Operations in TensorFlow don't do anything until you run them, or an op that depends on their output. And the summary nodes that we've just created are peripheral to your graph: none of the ops you are currently running depend on them.  
+Operations in TensorFlow don't do anything until you run them, or an op that depends on their output.
 
 In order to generate summaries, you need to run all of these summary nodes, which means they should hold the value of tensor in the graph. We offer you a simple method managing them (which you have already initialized with `Tensorboard.init_scalar()`) by using [`tf.summary.merge_all`](https://www.tensorflow.org/api_docs/python/tf/summary/merge_all). 
 
@@ -121,22 +119,15 @@ Args:
 display_summary(time_stamp=False)
 ```
 
-Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
-
-The summary variables in the given collections will be identified by the name of their collection.  
+Displays summaries (e.g. global step, loss, accuracy) in the console.
 
 Args:  
 
-- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
-- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
-
-Raises:
-
-- **`ValueError`**: Could not find a `value` in `collections`.   
+- **`time_stamp`**: An optional bool to log time (time consumed between training steps). 
 
 ---
 
-
+<br/>
 
 ### Images: Image Processing and Decoding Operations
 
