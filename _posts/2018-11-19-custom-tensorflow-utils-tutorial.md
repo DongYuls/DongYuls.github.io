@@ -40,13 +40,7 @@ Args:
 
 - **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
 
-
-
 <br/>
-
-##### Methods
-
----
 
 **init_scalar**  
 
