@@ -9,9 +9,11 @@ categories: [Tensorflow, Custom Utility, Reference]
 
 Last Modified: 2018.11.19
 
-This is my custom library (tensorflow wrapper) documentation. All the classes and functions introduced in this article are basically implemented by TensorFlow to support deep learning researcher. To warm-start this: `import tensorflow_utils as tf`.
+This is my custom library (tensorflow wrapper) documentation. All the classes and functions introduced in this article are basically implemented by TensorFlow to support deep learning researcher.
 
 ---
+
+<br/>
 
 ### tf_utils.tensorboard.Tensorboard
 
@@ -20,6 +22,8 @@ Defined in `tensorflow_utils/tensorboard.py`.
 TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).  
 
 #### \_\_init\_\_
+
+---
 
 ```ruby
 __init__(
