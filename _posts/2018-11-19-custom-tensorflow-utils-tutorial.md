@@ -126,6 +126,41 @@ Args:
 
 
 
+
+```python
+import tensorflow as tf
+import tensorflow_utils as tf_utils
+
+images = tf.placeholder(tf.float32, shape=[None, 28, 28, 1])
+labels = tf.placeholder(tf.int32, shape=[None, 10]) # one-hot encoded labels
+
+logits = ... # the output of the model
+
+loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=logits))
+accuracy = tf.reduce_mean(tf.equal(tf.argmax(logits, 1), tf.argmax(labels, 1)))
+
+tensorboard = tf_utils.Tensorboard(log_dir='checkpoint')
+
+# summary variables to temporarily store the corresponding values
+loss_curr = tf.get_variable(name='Loss', shape=[], trainable=False, initializer=tf.zeros_initializer())
+accuracy_curr = tf.get_variable(name='Accuracy', shape=[], trainable=False, initializer=tf.zeros_initializer())
+
+tf.add_to_collection('tensorboard', loss)
+tf.add_to_collection('tensorboard', accuracy)
+tensorboard.init_scalar(collections=['tensorboard'])
+
+sess = tf.Session()
+
+batch_images, batch_labels = ...
+
+values = sess.run([model.loss, model.accuracy], feed_dict={images: batch_images, labels: batch_labels})
+
+tensorboard.add_summary(sess=sess, feed_dict=[loss_curr: values[0], acc_curr: values[1]])
+tensorboard.display_summary(time_stamp=False)
+```
+
+
+
 <br/>
 
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})
