@@ -86,8 +86,6 @@ Args:
 - **`collections`**: Collection list containing the summary variables to be saved.
 - **`num_outputs`**: Max number of batch elements to generate images for. 
 
-
-
 <br/>
 
 **add_summary**
@@ -107,8 +105,6 @@ Args:
 - **`sess`**: A TensorFlow `Session` object.
 - **`feed_dict`**:  A dictionary that maps graph elements to values. (must be compatible feed values for the respective elements of keys)
 
-
-
 <br/>
 
 **display_summary**
@@ -123,9 +119,9 @@ Args:
 
 - **`time_stamp`**: An optional bool to log time (time elapsed between the training steps). 
 
+<br/>
 
-
-
+#### Example Code:
 
 ```python
 import tensorflow as tf
@@ -143,7 +139,7 @@ tensorboard = tf_utils.Tensorboard(log_dir='checkpoint')
 
 # summary variables to temporarily store the corresponding values
 loss_curr = tf.get_variable(name='Loss', shape=[], trainable=False, initializer=tf.zeros_initializer())
-accuracy_curr = tf.get_variable(name='Accuracy', shape=[], trainable=False, initializer=tf.zeros_initializer())
+accuracy_curr = tf.get_variable(name='Acc', shape=[], trainable=False, initializer=tf.zeros_initializer())
 
 tf.add_to_collection('tensorboard', loss)
 tf.add_to_collection('tensorboard', accuracy)
@@ -151,11 +147,26 @@ tensorboard.init_scalar(collections=['tensorboard'])
 
 sess = tf.Session()
 
-batch_images, batch_labels = ...
+train_images, train_labels = ...
+# compute loss and accuracy of training batch
+values = sess.run([model.loss, model.accuracy], feed_dict={images: train_images, labels: train_labels})
+# add summaries to the training logs
+tensorboard.add_summary(sess=sess, feed_dict=[loss_curr: values[0], acc_curr: values[1]], log_type='train')
 
-values = sess.run([model.loss, model.accuracy], feed_dict={images: batch_images, labels: batch_labels})
+# validation step
+test_loss, test_acc = [], []
+while True:
+    # validation batch
+    try: test_images, test_label = ... 
+    except: break
+        
+    values = sess.run([loss, accuracy], feed_dict={images: test_images, labels: test_labels})
+    test_loss.append(values[0])
+    test_acc.append(values[1])
 
-tensorboard.add_summary(sess=sess, feed_dict=[loss_curr: values[0], acc_curr: values[1]])
+# add summaries to the validation/test logs
+tensorboard.add_summary(sess=sess, feed_dict={loss_curr: np.mean(test_loss), acc_curr: np.mean(test_acc)}, log_type='test')
+
 tensorboard.display_summary(time_stamp=False)
 ```
 
