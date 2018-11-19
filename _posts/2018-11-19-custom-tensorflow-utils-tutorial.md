@@ -125,7 +125,7 @@ Args:
 
 #### Example Code:
 
-The following code demonstrates a single training step and validation loop for a large scale of dataset. Note that here training and validation loops are sharing two variables, `loss_curr` and `acc_curr`, to add summaries to their own logs.
+The following code demonstrates a single training step and validation loop for a large scale of dataset or possibly other dataset that needs a loop to compute the evaluation metrics. Note that here training and validation loops are sharing two variables, `loss_curr` and `accuracy_curr`, to add summaries to their own logs.
 
 ```python
 import tensorflow as tf
@@ -134,7 +134,7 @@ import tensorflow_utils as tf_utils
 images = tf.placeholder(tf.float32, shape=[None, 299, 299, 3])
 labels = tf.placeholder(tf.int32, shape=[None, 10]) # one-hot encoded labels
 
-logits = ... # the output of the model
+logits = ... # the output of your model
 
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=logits))
 accuracy = tf.reduce_mean(tf.equal(tf.argmax(logits, 1), tf.argmax(labels, 1)))
@@ -155,7 +155,7 @@ train_images, train_labels = ...
 
 # compute loss and accuracy of training batch
 values = sess.run([model.loss, model.accuracy], feed_dict={images: train_images, labels: train_labels})
-# add summaries to the training logs
+# add summaries to training logs
 tensorboard.add_summary(sess=sess, feed_dict=[loss_curr: values[0], acc_curr: values[1]], log_type='train')
 
 # validation step
@@ -168,7 +168,7 @@ while True:
     test_loss.append(values[0])
     test_acc.append(values[1])
 
-# add summaries to the validation/test logs
+# add summaries to validation/test logs
 tensorboard.add_summary(sess=sess, feed_dict={loss_curr: np.mean(test_loss), acc_curr: np.mean(test_acc)}, log_type='test')
 
 tensorboard.display_summary(time_stamp=False)
