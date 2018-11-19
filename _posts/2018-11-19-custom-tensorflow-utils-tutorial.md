@@ -60,12 +60,8 @@ The summary variables in the given collections will be identified by the name of
 
 Args:  
 
-- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
-- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+- **`collections`**: Collection list containing the summary variables to be saved. 
 
-Raises:
-
-- **`ValueError`**: Could not find a `value` in `collections`. 
 
 <br/>
 
@@ -78,18 +74,25 @@ init_scalar(
 )
 ```
 
-Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
+The summary has up to `num_outputs` summary values containing images. The images are built from `tensor` which must be 4-D with shape `[batch_size, height, width, channels]` and where `channels` can be:
 
-The summary variables in the given collections will be identified by the name of their collection.  
+- 1: `tensor` is interpreted as Grayscale.
+- 3: `tensor` is interpreted as RGB.
+- 4: `tensor` is interpreted as RGBA.
+
+The images have the same number of channels as the input tensor. For float input, the values are normalized one image at a time to fit in the range `[0, 255]`. `uint8` values are unchanged. The op uses two different normalization algorithms:
+
+- If the input values are all positive, they are rescaled so the largest one is 255.
+- If any input value is negative, the values are shifted so input value 0.0 is at 127. They are then rescaled so that either the smallest value is 0, or the largest one is 255.
+
+For further details on this `tf.summary.images` operations , check out the docs on [here](https://www.tensorflow.org/api_docs/python/tf/summary/image).
 
 Args:  
 
-- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
-- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+- **`collections`**: Collection list containing the summary variables to be saved.
+- **`num_outputs`**: Max number of batch elements to generate images for. 
 
-Raises:
 
-- **`ValueError`**: Could not find a `value` in `collections`. 
 
 <br/>
 
