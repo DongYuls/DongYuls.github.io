@@ -15,6 +15,8 @@ This is my custom library (tensorflow wrapper) documentation. All the classes an
 
 ### Tensorboard: Visualizing Learning
 
+<br/>
+
 #### tf_utils.tensorboard.Tensorboard
 
 Defined in `tensorflow_utils/tensorboard.py`.  
@@ -42,7 +44,7 @@ Args:
 
 <br/>
 
-#### Methods
+##### Methods
 
 ---
 
