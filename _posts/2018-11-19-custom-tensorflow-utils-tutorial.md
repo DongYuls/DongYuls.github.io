@@ -23,13 +23,7 @@ Defined in `tensorflow_utils/tensorboard.py`
 
 TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).  
 
----
-
-
-
-#### \_\_init\_\_
-
----
+**\_\_init\_\_**
 
 ```ruby
 __init__(
@@ -38,7 +32,7 @@ __init__(
 )
 ```
 
-Contstructs an `Tensorboard` instance, which is a suite of visualization tools for Tensorflow training framework (e.g. loss graph, embeddings).
+Contstructs a `Tensorboard` instance, which is a suite of visualization tools for TensorFlow training framework (e.g. loss graph, embeddings).
 
 Args:  
 
@@ -60,7 +54,7 @@ Args:
 init_scalar(collections=None)
 ```
 
-Initializes all `value` stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the `value` in any of the collections pre-exists using `tf.add_to_collection()`.  
+Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
 
 The summary variables in the given collections will be identified by the name of their collection.  
 
@@ -77,7 +71,27 @@ Raises:
 
 **init_images**
 
+```ruby
+init_scalar(
+    collections=None,
+    num_outputs=1
+)
+```
 
+Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
+
+The summary variables in the given collections will be identified by the name of their collection.  
+
+Args:  
+
+- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
+- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+
+Raises:
+
+- **`ValueError`**: Could not find a `value` in `collections`. 
+
+<br/>
 
 **add_summary**
 
@@ -89,7 +103,41 @@ add_summary(
 )
 ```
 
+Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
 
+The summary variables in the given collections will be identified by the name of their collection.  
+
+Args:  
+
+- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
+- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+
+Raises:
+
+- **`ValueError`**: Could not find a `value` in `collections`. 
+
+<br/>
+
+**display_summary**
+
+```ruby
+display_summary(time_stamp=False)
+```
+
+Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
+
+The summary variables in the given collections will be identified by the name of their collection.  
+
+Args:  
+
+- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
+- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+
+Raises:
+
+- **`ValueError`**: Could not find a `value` in `collections`.   
+
+---
 
 
 
