@@ -125,11 +125,13 @@ Args:
 
 #### Example Code:
 
+The following code demonstrates a single training step and validation loop for a large scale of dataset. Note that here training and validation loops are sharing two variables, `loss_curr` and `acc_curr`, to add summaries to their own logs.
+
 ```python
 import tensorflow as tf
 import tensorflow_utils as tf_utils
 
-images = tf.placeholder(tf.float32, shape=[None, 28, 28, 1])
+images = tf.placeholder(tf.float32, shape=[None, 299, 299, 3])
 labels = tf.placeholder(tf.int32, shape=[None, 10]) # one-hot encoded labels
 
 logits = ... # the output of the model
@@ -150,6 +152,7 @@ tensorboard.init_scalar(collections=['tensorboard'])
 sess = tf.Session()
 
 train_images, train_labels = ...
+
 # compute loss and accuracy of training batch
 values = sess.run([model.loss, model.accuracy], feed_dict={images: train_images, labels: train_labels})
 # add summaries to the training logs
@@ -158,7 +161,6 @@ tensorboard.add_summary(sess=sess, feed_dict=[loss_curr: values[0], acc_curr: va
 # validation step
 test_loss, test_acc = [], []
 while True:
-    # validation batch
     try: test_images, test_label = ... 
     except: break
         
@@ -172,7 +174,7 @@ tensorboard.add_summary(sess=sess, feed_dict={loss_curr: np.mean(test_loss), acc
 tensorboard.display_summary(time_stamp=False)
 ```
 
-
+To launch tensorboard after training, use the following command: `tensorboard --logdir=checkpoint`.
 
 <br/>
 
