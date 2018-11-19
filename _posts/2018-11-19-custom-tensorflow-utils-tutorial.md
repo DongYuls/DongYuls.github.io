@@ -17,12 +17,6 @@ This tutorial refers to <https://www.tensorflow.org/guide/summaries_and_tensorbo
 
 Defined in `tensorflow_utils/tensorboard.py`
 
-To warm-start an `Tensorboard`:
-
-```python
-import tensorflow_utils as tf_utils
-```
-
 <br/>
 
 #### tf_utils.tensorboard.Tensorboard
@@ -43,7 +37,10 @@ Contstructs an `Tensorboard` instance, which is a suite of visualization tools f
 Args:  
 
 - **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
+
 - **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+
+
 
 <br/>
 
@@ -53,9 +50,22 @@ Properties
 
 **init_scalar**  
 
-`init_scalar(collections=None)`
+```ruby
+init_scalar(collections=None)
+```
 
-Shows the directory name where evaluation metrics are dumped.
+Initializes all `value` stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the `value` in any of the collections pre-exists using `tf.add_to_collection()`.  
+
+The summary variables in the given collections will be identified by the name of their collection.  
+
+Args:  
+
+- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
+- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+
+Raises:
+
+- **`ValueError`**: Could not find a `value` in `collections`. 
 
 
 
