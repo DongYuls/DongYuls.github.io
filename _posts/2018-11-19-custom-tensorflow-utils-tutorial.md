@@ -13,17 +13,13 @@ This is my custom library (tensorflow wrapper) documentation. All the classes an
 
 ---
 
-<br/>
-
 ### tf_utils.tensorboard.Tensorboard
 
 Defined in `tensorflow_utils/tensorboard.py`.  
 
 TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).  
 
-#### \_\_init\_\_
-
----
+**\_\_init\_\_**
 
 ```ruby
 __init__(
@@ -106,18 +102,16 @@ add_summary(
 )
 ```
 
-Initializes all scalar values stored in the given collections by attaching `tf.summary.scalar` .  Make sure that the value in any of the collections is scalar type and pre-exists using `tf.add_to_collection()`.  
+Operations in TensorFlow don't do anything until you run them, or an op that depends on their output. And the summary nodes that we've just created are peripheral to your graph: none of the ops you are currently running depend on them.  
 
-The summary variables in the given collections will be identified by the name of their collection.  
+In order to generate summaries, you need to run all of these summary nodes, which means they should hold the value of tensor in the graph. We offer you a simple method managing them (which you have already initialized with `Tensorboard.init_scalar()`) by using [`tf.summary.merge_all`](https://www.tensorflow.org/api_docs/python/tf/summary/merge_all). 
 
 Args:  
 
-- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
-- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+- **`sess`**: A TensorFlow `Session` object.
+- **`feed_dict`**:  A dictionary that maps graph elements to values. (must be compatible feed values for the respective elements of keys)
 
-Raises:
 
-- **`ValueError`**: Could not find a `value` in `collections`. 
 
 <br/>
 
