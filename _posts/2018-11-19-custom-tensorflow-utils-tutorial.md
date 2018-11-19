@@ -9,7 +9,7 @@ categories: [Tensorflow, Custom Utility, Reference]
 
 Last Modified: 2018.11.07
 
-This tutorial refers to <https://www.tensorflow.org/guide/summaries_and_tensorboard>
+This is my custom library (tensorflow wrapper) documentation. All the classes and functions introduced in this article are basically implemented by TensorFlow to support deep learning researcher. 
 
 ---
 
@@ -23,7 +23,13 @@ Defined in `tensorflow_utils/tensorboard.py`
 
 TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).  
 
-**\_\_init\_\_**  
+---
+
+
+
+#### \_\_init\_\_
+
+---
 
 ```ruby
 __init__(
@@ -44,7 +50,7 @@ Args:
 
 <br/>
 
-Properties
+#### Methods
 
 ---
 
@@ -66,6 +72,22 @@ Args:
 Raises:
 
 - **`ValueError`**: Could not find a `value` in `collections`. 
+
+<br/>
+
+**init_images**
+
+
+
+**add_summary**
+
+```ruby
+add_summary(
+    sess,
+    feed_dict,
+    log_type='train'
+)
+```
 
 
 
