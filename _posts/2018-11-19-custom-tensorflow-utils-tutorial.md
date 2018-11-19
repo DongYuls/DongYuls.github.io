@@ -121,7 +121,7 @@ Displays summaries (e.g. global step, loss, accuracy) in the console.
 
 Args:  
 
-- **`time_stamp`**: An optional bool to log time (time consumed between the training steps). 
+- **`time_stamp`**: An optional bool to log time (time elapsed between the training steps). 
 
 
 
