@@ -119,6 +119,8 @@ Args:
 
 - **`time_stamp`**: An optional bool to log time (time elapsed between the training steps). 
 
+---
+
 <br/>
 
 #### Example Code:
@@ -141,8 +143,8 @@ tensorboard = tf_utils.Tensorboard(log_dir='checkpoint')
 loss_curr = tf.get_variable(name='Loss', shape=[], trainable=False, initializer=tf.zeros_initializer())
 accuracy_curr = tf.get_variable(name='Acc', shape=[], trainable=False, initializer=tf.zeros_initializer())
 
-tf.add_to_collection('tensorboard', loss)
-tf.add_to_collection('tensorboard', accuracy)
+tf.add_to_collection('tensorboard', loss_curr)
+tf.add_to_collection('tensorboard', accuracy_curr)
 tensorboard.init_scalar(collections=['tensorboard'])
 
 sess = tf.Session()
