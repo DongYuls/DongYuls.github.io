@@ -17,29 +17,35 @@ This tutorial refers to <https://www.tensorflow.org/guide/summaries_and_tensorbo
 
 Defined in `tensorflow_utils/tensorboard.py`
 
+To warm-start an `Tensorboard`:
+
+```python
+import tensorflow_utils as tf_utils
+```
+
+<br/>
+
 #### tf_utils.tensorboard.Tensorboard
 
-TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).
-
-
+TensorBoard operates by reading TensorFlow events files, which contain summary data that you can generate when running TensorFlow. For more information, see [Serializing the data](https://www.tensorflow.org/guide/summaries_and_tensorboard).  
 
 **\_\_init\_\_**  
 
-```python
+```ruby
 __init__(
-	log_dir='checkpoint'
+    log_dir='checkpoint'
     overwrite=True
 )
 ```
 
-Contstructs an `Tensorboard` instance, which is a suite of visualization tools for TensorFlow programs (e.g. loss graph, images).
+Contstructs an `Tensorboard` instance, which is a suite of visualization tools for Tensorflow training framework (e.g. loss graph, embeddings).
 
 Args:  
 
 - **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
 - **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
 
-
+<br/>
 
 Properties
 
@@ -52,6 +58,14 @@ Properties
 Shows the directory name where evaluation metrics are dumped.
 
 
+
+
+
+### Images: Image Processing and Decoding Operations
+
+Defined in `tensorflow_utils/images.py`
+
+<br/>
 
 **tf_utils.images.batch_wavelet_tranform**
 
