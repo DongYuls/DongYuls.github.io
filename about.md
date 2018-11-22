@@ -16,9 +16,9 @@ If you require further information, please email me: <dongyul.oh@snu.ac.kr>
 
 **Education**
 
-M.S) Interdisciplinary Program in Bioengineering, Seoul National University, Korea (Present)
+M.S.) Interdisciplinary Program in Bioengineering, Seoul National University, Korea (Present)
 
-B.S) Department of Digital Information Engineering, Hankuk University of Foreign Studies, Korea
+B.S.) Department of Digital Information Engineering, Hankuk University of Foreign Studies, Korea
 
 <br/>
 

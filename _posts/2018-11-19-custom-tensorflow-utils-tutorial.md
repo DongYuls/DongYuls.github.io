@@ -98,7 +98,9 @@ add_summary(
 )
 ```
 
-In order to generate summaries, you need to run all of these summary nodes, which means they should hold the value of tensor in the graph. We offer you a simple method managing them (which you have already initialized above) by using [`tf.summary.merge_all`](https://www.tensorflow.org/api_docs/python/tf/summary/merge_all). 
+In order to generate summaries, you need to run all of these summary nodes, which means they should hold the value of tensor in the graph. We offer you a simple method managing them (which you have already initialized above) by using [`tf.summary.merge_all()`](https://www.tensorflow.org/api_docs/python/tf/summary/merge_all).   
+
+Make sure that all summary variables that you added to the summary collections are assigned.
 
 Args:  
 
