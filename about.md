@@ -29,5 +29,5 @@ A.I Researcher, Department of Radiology, Seoul National University Bundang Hospi
 
 Research Intern, W-Research, Naver Webtoon Corporation, Korea (2018.07-2018.09)
 
-Research Student Intern, Music and Audio Reasearch Group, Seoul National University, Korea (2017.07-2017.11)
+Research Student Intern, Music and Audio Research Group, Seoul National University, Korea (2017.07-2017.11)
 

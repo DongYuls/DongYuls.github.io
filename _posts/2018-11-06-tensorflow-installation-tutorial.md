@@ -107,7 +107,7 @@ After editing .profile, reboot the system or logout.
 `pyenv versions` to list python versions that you have.  
 `pyenv global 3.6.6`   
 
-Some useful python packages: `pip install pydicom scipy scikit-image`
+Some useful python packages: `pip install pydicom scipy scikit-image sklearn pandas`
 
 ---
 <br/>
