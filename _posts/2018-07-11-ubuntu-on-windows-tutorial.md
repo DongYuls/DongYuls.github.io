@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ubuntu on Windows10 (WSL) Tutorial"
+title:  "Ubuntu on Windows10 Tutorial"
 date:   2018-07-11 14:11:10 +0700
 categories: [Tutorial, Ubuntu, WSL, Windows10]
 ---
@@ -8,6 +8,8 @@ categories: [Tutorial, Ubuntu, WSL, Windows10]
 ---
 
 Last Modified: 2018.07.11  
+
+**NOTE THAT CUDA SUPPORT IS NOT AVAILABLE ON WSL**
 
 ---
 ### Installation
@@ -21,10 +23,6 @@ Ubuntu can be installed from the **Microsoft Store**:
 
 - Use the Start menu to launch the Microsoft Store application.
 - Search and install *Ubuntu 16.04* published by Canonical Group Limited.
-
-<br/>
-
-> ***NOTE THAT CUDA SUPPORT IS NOT AVAILABLE ON WSL***
 
 <br/>
 
@@ -56,11 +54,9 @@ You should allow the port number that you have set for SSH above (e.g. 1234).
 
 Type `sudo service ssh --full-restart` on your ubuntu shell to restart the server. 
 
----
-
 <br/>
 
-### SSH into Ubuntu 16.04 on Windows 10
+#### 5. SSH into Ubuntu 16.04 on Windows 10
 
 Open `Start - Remote Desktop Connection` and type the IP address of your remote server with **its own FTP port number**, for example "123.456.78.90:1234".
 

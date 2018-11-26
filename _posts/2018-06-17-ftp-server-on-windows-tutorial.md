@@ -11,7 +11,7 @@ Last Modified: 2018.07.11
 This tutorial refers to <http://frog-hindleg.tistory.com/118>.
 
 ---
-### NVIDIA Settings (Only GPU)
+### Bulid FTP Server
 
 You'll find many third-party software on the internet to build a file transfer server, but Windows includes an FTP server feature that you can set up without the need to resource to other solutions. Since FTP server can only write/read files and not control the whole system like remote desktop, using the default port 21 is OK.
 
