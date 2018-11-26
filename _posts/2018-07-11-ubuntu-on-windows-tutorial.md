@@ -28,7 +28,9 @@ Ubuntu can be installed from the **Microsoft Store**:
 
 #### 1. Edit the Registry
 
-In order to use this feature, you should activate "Windows Subsystem for Linux" in *Windows Features On or Off*. Press `Windows + R` on your keyboard to open Run dialog box and type `OptionalFeatures.exe` to directly do this. Then reboot!
+In order to use this feature, you should activate "Windows Subsystem for Linux" in *Windows Features On or Off*.  
+
+Press `Windows + R` on your keyboard to open Run dialog box and type `OptionalFeatures.exe` to directly do this. Then reboot the system.
 
 <br/>
 
