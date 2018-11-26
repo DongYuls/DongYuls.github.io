@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Tensorflow Installation Tutorial"
-date:   2018-11-06 18:34:10 +0700
+title:  "FTP Server on Windows10 Tutorial"
+date:   2018-06-17 18:34:10 +0700
 categories: [Tutorial, Tensorflow, Installation]
 ---
 
