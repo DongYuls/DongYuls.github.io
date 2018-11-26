@@ -38,7 +38,7 @@ The above steps only enable to use Ubuntu 16.04 on Windows10. To use SSH just li
 
 - Run `sudo vim /etc/ssh/sshd_config` to edit the SSH configuration file.
 - Change the port number (default=22) such as 1234.
-- Make sure that **UsePrivilegeSeparation** is set to **no**,  because this option does not yet support chroot() calls in WSL. 
+- Make sure that **UsePrivilegeSeparation** is set to **no**,  because this option is not supported yet in WSL. 
 - If you want to connect ther server with your own password, make sure that **PasswordAuthentication** is set to **yes**. It will also ask for a key file in SSH connection.
 - When the error with key files occurs, you should generate these key files manually. For example `sudo ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key`
 
