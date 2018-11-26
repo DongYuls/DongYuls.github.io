@@ -13,7 +13,9 @@ This tutorial refers to <http://frog-hindleg.tistory.com/118>.
 ---
 ### NVIDIA Settings (Only GPU)
 
-You'll find many third-party software on the internet to build a file transfer server, but Windows includes an FTP server feature that you can set up without the need to resource to other solutions. Since FTP server can only write/read files and not control the whole system like remote desktop, using the default port 21 is OK.  
+You'll find many third-party software on the internet to build a file transfer server, but Windows includes an FTP server feature that you can set up without the need to resource to other solutions. Since FTP server can only write/read files and not control the whole system like remote desktop, using the default port 21 is OK.
+
+<br/>
 
 #### 1. Activate FTP Services
 
@@ -29,7 +31,7 @@ Press `Windows + R` on your keyboard to open Run dialog box and type `OptionalFe
   - IIS Management Service
   - **IIS Management Console**
 
-
+<br/>
 
 #### 2. Configure FTP with IIS Manager
 
@@ -47,4 +49,3 @@ Type `inetmgr.exe` in Run dialog box to open *IIS Management Tools*, or you can 
 Further Information: <dongyul.oh@snu.ac.kr>
 
 <br/>
-
