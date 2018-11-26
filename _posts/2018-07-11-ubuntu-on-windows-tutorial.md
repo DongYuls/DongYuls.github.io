@@ -48,7 +48,7 @@ The above steps only enable to use Ubuntu 16.04 on Windows10. To use SSH just li
 
 #### 3. Open a Specific Port in Firewall for SSH
 
-You should allow the port number that you set for SSH. This has already been addressed in the [last post]({% post_url 2018-06-01-remote_windows_tutorial %}).
+You should allow the port number that you have set for SSH above (e.g. 1234).
 
 <br/>
 
