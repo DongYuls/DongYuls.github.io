@@ -2,7 +2,7 @@
 layout: post
 title:  "FTP Server on Windows10 Tutorial"
 date:   2018-11-26 16:53:10 +0700
-categories: [Tutorial, FTP, Server, Windows10]
+categories: [Tutorial]
 ---
 
 ---
