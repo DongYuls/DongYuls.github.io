@@ -8,20 +8,30 @@ categories: [Tutorial, FTP, Server, Windows10]
 ---
 
 Last Modified: 2018.07.11  
-This tutorial refers to http://frog-hindleg.tistory.com/118.
+This tutorial refers to <http://frog-hindleg.tistory.com/118>.
 
 ---
 ### NVIDIA Settings (Only GPU)
 
-You'll find many third-party software on the internet to build a file transfer server, but Windows includes an FTP server feature that you can set up without the need to resource to other solutions. Since FTP server can only write/read files and not control the whole system like remote desktop, using the default port 21 is OK.
-
-<br/>
+You'll find many third-party software on the internet to build a file transfer server, but Windows includes an FTP server feature that you can set up without the need to resource to other solutions. Since FTP server can only write/read files and not control the whole system like remote desktop, using the default port 21 is OK.  
 
 #### 1. Activate FTP Services
 
-- NVIDIA® GPU card with CUDA® Compute Capability >= 3.5. See the list of [CUDA-enabled GPU cards](https://developer.nvidia.com/cuda-gpus).
+Press `Windows + R` on your keyboard to open Run dialog box and type `OptionalFeatures.exe` to directly access *Windows Features On or Off*.  Check the following features marked in bold:
 
-#### Software Requirements
+- **Internet Information Services**
+  - **FTP Server**
+    - **FTP Services**
+    - FTP Extensibility
+- **Web Management Tools**
+  - IIS 6 Management Compatibility
+  - IIS Management Scripts and Tools
+  - IIS Management Service
+  - **IIS Management Console**
+
+
+
+#### 2. Configure FTP with IIS Manager
 
 - NVIDIA® GPU drivers: CUDA 9.0 requires 384.x or higher.  
 - CUDA® Toolkit: TensorFlow supports CUDA 9.0.  
