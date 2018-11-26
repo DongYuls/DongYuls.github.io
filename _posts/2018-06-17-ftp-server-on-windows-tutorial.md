@@ -7,16 +7,17 @@ categories: [Tutorial, FTP, Server, Windows10]
 
 ---
 
-Last Modified: 2018.11.07  
-This tutorial refers to <https://www.tensorflow.org/install>.
+Last Modified: 2018.07.11  
+This tutorial refers to http://frog-hindleg.tistory.com/118.
 
 ---
 ### NVIDIA Settings (Only GPU)
 
-TensorFlow GPU support requires an assortment of drivers and libraries. To avoid library conflicts, your are recommended using a **virtual environment with pyenv** (Linux only) after installation of Tensorflow GPU.  
+You'll find many third-party software on the internet to build a file transfer server, but Windows includes an FTP server feature that you can set up without the need to resource to other solutions. Since FTP server can only write/read files and not control the whole system like remote desktop, using the default port 21 is OK.
+
 <br/>
 
-#### Hardware Requirements
+#### 1. Activate FTP Services
 
 - NVIDIA® GPU card with CUDA® Compute Capability >= 3.5. See the list of [CUDA-enabled GPU cards](https://developer.nvidia.com/cuda-gpus).
 
