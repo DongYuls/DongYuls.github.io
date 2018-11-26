@@ -28,13 +28,13 @@ Ubuntu can be installed from the **Microsoft Store**:
 
 #### 1. Edit the Registry
 
-In order to use this feature, you should activate "Windows Subsystem for Linux" in *Windows Features On or Off*.  Press `Windows + R` on your keyboard to open Run dialog box and type `OptionalFeatures.exe` to directly do this. Then reboot the system.
+You should activate "Windows Subsystem for Linux" in *Windows Features On or Off*.  To do this, press `Windows + R` to open Run dialog box and type `OptionalFeatures.exe` to directly do this. Then reboot the system.
 
 <br/>
 
 #### 2. Configuration
 
-The above steps only enable to use Ubuntu 16.04 on Windows10. To use SSH just like openssh-server in local ubuntu machine, you need to **configure some features that Windows does not support**. If you do not have openssh-server toolkit, type `sudo apt-get install openssh-server`  
+The above steps only enable to use Ubuntu 16.04 on Windows10. To use SSH just like openssh-server in local ubuntu machine, you need to configure some features that Windows does not support. If you do not have openssh-server toolkit, type `sudo apt-get install openssh-server`  
 
 - Run `sudo vim /etc/ssh/sshd_config` to edit the SSH configuration file.
 - Change the port number (default=22) such as 1234.
@@ -46,7 +46,7 @@ The above steps only enable to use Ubuntu 16.04 on Windows10. To use SSH just li
 
 #### 3. Open a Specific Port in Firewall for SSH
 
-You should allow the port number that you have set for SSH above (e.g. 1234).
+Allow the port number that you have set for SSH above (e.g. 1234). See the [last post]({% post_url 2018-06-17-ftp-server-on-windows-tutorial %})
 
 <br/>
 
@@ -58,7 +58,7 @@ Type `sudo service ssh --full-restart` on your ubuntu shell to restart the serve
 
 #### 5. SSH into Ubuntu 16.04 on Windows 10
 
-Open `Start - Remote Desktop Connection` and type the IP address of your remote server with **its own FTP port number**, for example "123.456.78.90:1234".
+Open `Start - Remote Desktop Connection` and type the IP address of your remote server with **your own FTP port number**, for example "123.456.78.90:1234".
 
 <br/>
 
