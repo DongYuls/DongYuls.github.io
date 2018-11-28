@@ -129,10 +129,10 @@ This tutorial is only validated with the following dependencies.
 
 <br/>
 
-#### 1. Install Visual Studio 2010
+#### 1. Install Visual Studio 2015
 
 First of all, you need C/C\++ compiler such as Visual C\++ or MinGW. However, matconvnet which is a library for building convolution neural network, currently only supports Visual C\++.  
-Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visualstudio.com/ko/vs/older-downloads/).  
+Download: [https://www.visualstudio.com/ko/vs/older-downloads/](https://www.visualstudio.com/ko/vs/older-downloads/). The download will be activated only if you agree to use the Visual Studio Dev Essentials benefit on the MyAccount page.
 
 <br/>
 
