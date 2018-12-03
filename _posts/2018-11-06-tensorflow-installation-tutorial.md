@@ -158,18 +158,15 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools
 ```
 
-Make new system environment variable path named **include** and **LIB**, respectively, in order to link the basic header files for C++ compiler.
+Make new system environment variable path named **INCLUDE** and **LIB**, respectively, in order to link the basic header files for C++ compiler.
 
 ```
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt
 ```
+
 ```
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib
-C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10150.0\ucrt\x64
-C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x64
+C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10240.0\um\x64
+C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10240.0\ucrt\x64
 ```
 
 
