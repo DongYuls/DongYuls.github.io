@@ -106,6 +106,7 @@ Args:
 
 - **`sess`**: A TensorFlow `Session` object.
 - **`feed_dict`**:  A dictionary that maps graph elements to values. (must be compatible feed values for the respective elements of keys)
+- **`log_type`**: A log type writing summaries for either  `train` or `test`.
 
 <br/>
 
