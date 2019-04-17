@@ -105,7 +105,9 @@ After editing .profile, reboot the system or logout.
 #### 4. Install python 3.n  
 `pyenv install 3.6.6` (to undo: `pyenv uninstall 3.6.6`)   
 `pyenv versions` to list python versions that you have.  
-`pyenv global 3.6.6`   
+`pyenv global 3.6.6` 
+
+Do not forget `sudo apt-get install python3-tk` before installing matplotlib.
 
 Some useful python packages: `pip install pydicom scipy scikit-image sklearn pandas xlrd`
 
@@ -115,6 +117,10 @@ Some useful python packages: `pip install pydicom scipy scikit-image sklearn pan
 ### Install Tensorflow
 Current release: `pip install tensorflow-gpu`  
 Legacy release: `pip install tensorflow-gpu==<version>`
+
+
+
+Note: tensorflow 1.13 only supports CUDA 10.0. If you have configured your installation environment with this tutorial, please install tensorflow 1.12.0 working on CUDA 9.0.
 
 ---
 
