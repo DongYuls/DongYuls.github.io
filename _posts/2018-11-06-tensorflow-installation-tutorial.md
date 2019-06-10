@@ -109,7 +109,7 @@ After editing .profile, reboot the system or logout.
 
 Do not forget `sudo apt-get install python3-tk` before installing matplotlib.
 
-Some useful python packages: `pip install pydicom scipy scikit-image sklearn pandas xlrd`
+Some useful python packages: `pip install pydicom scipy pillow scikit-image sklearn pandas xlrd opencv-contrib-python` 
 
 ---
 <br/>
