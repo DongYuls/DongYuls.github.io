@@ -1,11 +1,42 @@
 [
 	{
-		"slug": "anomaly-detection",
-		"name": "Anomaly Detection on SMD Machine Sound",
-		"image": "smd_machine.png",
-		"url": "http://www.mdpi.com/1424-8220/18/5/1308/pdf",
-		"date": "March 2018",
-		"tags": ["SMD", "Machine Sound", "Anomaly Detection"]
+		"slug": "change-detection",
+		"name": "Longitudinal Change Detection on Chest X-rays",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "Oct 2019",
+		"tags": []
+	},
+	{
+		"slug": "maxillary-sinusitis",
+		"name": "Impact of Bilateral Correlation Map on Diagnostic Accuracy of Maxillary Sinusitis",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "June 2019",
+		"tags": []
+	},
+	{
+		"slug": "detectability",
+		"name": "Low-Contrast Detectability of Image-based Denoising Algorithm in CT",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "June 2019",
+		"tags": []
+	},
+	{
+		"slug": "image-quality",
+		"name": "Improvement of Image Quality in Low-Dose Computed Tomography",
+		"image": "placeholder.jpg",
+		"date": "Dec 2018",
+		"tags": []
+	},
+	{
+		"slug": "nonrigid-deformation",
+		"name": "Phase-Based Nonrigid Deformation for Digital Subtraction Angiography",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "Mar 2019",
+		"tags": ["Nonrigid Deformation", "Angiography"]
 	},
 	{
 		"slug": "roi-segmentation",
@@ -16,28 +47,11 @@
 		"tags": ["ROI", "Chest X-rays"]
 	},
 	{
-		"name": "Cool project 3",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2014",
-		"tags": ["HTML","JQuery","Django"]
-	},
-	{
-		"name": "Cool project 4",
-		"image": "placeholder.jpg",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
-	},
-	{
-		"name": "Cool project 5",
-		"image": "placeholder.jpg",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
-	},
-	{
-		"name": "Cool project 6",
-		"image": "placeholder.jpg",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
+		"slug": "anomaly-detection",
+		"name": "Anomaly Detection on SMD Machine Sound",
+		"image": "smd_machine.png",
+		"url": "http://www.mdpi.com/1424-8220/18/5/1308/pdf",
+		"date": "March 2018",
+		"tags": ["SMD", "Machine Sound", "Anomaly Detection"]
 	}
 ]
