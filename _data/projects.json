@@ -2,17 +2,18 @@
 	{
 		"slug": "anomaly-detection",
 		"name": "Anomaly Detection on SMD Machine Sound",
-		"image": "smd_machine.PNG",
+		"image": "smd_machine.png",
 		"url": "http://www.mdpi.com/1424-8220/18/5/1308/pdf",
 		"date": "March 2018",
 		"tags": ["SMD", "Machine Sound", "Anomaly Detection"]
 	},
 	{
-		"name": "Cool project 2",
-		"image": "placeholder.jpg",
+		"slug": "roi-segmentation",
+		"name": "Weakly-Supervised ROI Segmentation on Chest X-Rays",
+		"image": "roi_segmentation.png",
 		"url": "#",
-		"date": "May 2014",
-		"tags": ["Python","Django"]
+		"date": "Feb 2018",
+		"tags": ["ROI", "Chest X-rays"]
 	},
 	{
 		"name": "Cool project 3",
