@@ -9,7 +9,7 @@
 	},
 	{
 		"slug": "roi-segmentation",
-		"name": "Weakly-Supervised ROI Segmentation on Chest X-Rays",
+		"name": "ROI Segmentation on Chest X-Rays",
 		"image": "roi_segmentation.png",
 		"url": "#",
 		"date": "Feb 2018",
