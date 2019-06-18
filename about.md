@@ -31,6 +31,8 @@ Research Intern, W-Research, Naver Webtoon Corporation, Korea (2018.07-2018.09)
 
 Research Student Intern, Music and Audio Research Group, Seoul National University, Korea (2017.07-2017.11)
 
+Journalist, University Student Supporters, Korea Youth Academic Conference, Korea (2016.05-2016.09)
+
 <br/>
 
 
