@@ -4,4 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
-Few of my projects. Currently doing more in backend, focused in deep learning based CAD.
+Few of my projects.
+
+## Note ##
+
+Currently doing more in backend, but not yet updated on this page. If you are interested in deep learning based CAD and statistical validation

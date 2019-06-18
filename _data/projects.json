@@ -1,50 +1,11 @@
-[
+[	
 	{
-		"slug": "change-detection",
-		"name": "Longitudinal Change Detection on Chest X-rays",
+		"slug": "project-name",
+		"name": "Coming Soon",
 		"image": "placeholder.jpg",
 		"url": "#",
-		"date": "Oct 2019",
+		"date": "",
 		"tags": []
-	},
-	{
-		"slug": "maxillary-sinusitis",
-		"name": "Impact of Bilateral Correlation Map on Diagnostic Accuracy of Maxillary Sinusitis",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2019",
-		"tags": []
-	},
-	{
-		"slug": "detectability",
-		"name": "Low-Contrast Detectability of Image-based Denoising Algorithm in CT",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2019",
-		"tags": []
-	},
-	{
-		"slug": "image-quality",
-		"name": "Improvement of Image Quality in Low-Dose Computed Tomography",
-		"image": "placeholder.jpg",
-		"date": "Dec 2018",
-		"tags": []
-	},
-	{
-		"slug": "nonrigid-deformation",
-		"name": "Phase-Based Nonrigid Deformation for Digital Subtraction Angiography",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "Mar 2019",
-		"tags": ["Nonrigid Deformation", "Angiography"]
-	},
-	{
-		"slug": "roi-segmentation",
-		"name": "ROI Segmentation on Chest X-Rays",
-		"image": "roi_segmentation.png",
-		"url": "#",
-		"date": "Feb 2018",
-		"tags": ["ROI", "Chest X-rays"]
 	},
 	{
 		"slug": "anomaly-detection",
