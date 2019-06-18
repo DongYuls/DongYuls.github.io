@@ -48,7 +48,4 @@ Soochahn Lee, Chang Ho Jeon, Leonard Sunwoo, <u>Dong Yul Oh</u>, and Kyong Joon 
 
 <u>Dong Yul Oh</u>, and Il Dong Yun. "Weakly-Supervised ROI Segmentation on Chest X-rays with Fully Convolutional Network." *The 24th International Workshop on Frontiers of Computer Vision*. 2018. 
 
-
-
-
-
+-
