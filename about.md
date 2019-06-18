@@ -40,7 +40,7 @@ Research Student Intern, Music and Audio Research Group, Seoul National Universi
 
 <u>Dong Yul Oh</u>, Youngjune Kim, …, and Won Chang. "Low-Contrast Detectability of Image-based Denoising Algorithm using Deep Learning in CT: A 12-Reader Study Comparing with Advanced Modeled Iterative Reconstruction and Filtered Back Projection" *The 75th Korean Congress of Radiology*. 2019. 
 
-Yejin Jeon, Kyeore Lee, <u>Dong Yul Oh</u>, …, and Leonard Sunwoo. "Impact of Bilateral Correlation Map on Diagnostic Accuracy of Maxillary Sinusitis on Conventional Radiograph using Deep Learning." *The 75th Korean Congress of Radiology*. 2019.
+Yejin Jeon, Kyeore Lee, <u>Dong Yul Oh</u>, …, and Leonard Sunwoo. "Impact of Bilateral Correlation Map on Diagnostic Accuracy of Maxillary Sinusitis on Convetional Radiograph using Deep Learning." *The 75th Korean Congress of Radiology*. 2019.
 
 Soochahn Lee, Chang Ho Jeon, Leonard Sunwoo, <u>Dong Yul Oh</u>, and Kyong Joon Lee. "Phase-Based Nonrigid Deformation for Digital Subtraction Angiography." *IEEE Access* 7 (2019): 32256-32265. 
 
