@@ -1,13 +1,5 @@
 [	
 	{
-		"slug": "project-name",
-		"name": "Coming Soon",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "",
-		"tags": []
-	},
-	{
 		"slug": "anomaly-detection",
 		"name": "Anomaly Detection on SMD Machine Sound",
 		"image": "smd_machine.png",
