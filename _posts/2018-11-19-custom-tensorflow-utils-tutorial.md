@@ -181,6 +181,37 @@ To launch tensorboard after training, use the following command: `tensorboard --
 
 <br/>
 
+#### tf_utils.dataset.TF_Dataset
+
+Defined in `tensorflow_utils/tensorboard.py`.  
+
+**\_\_init\_\_**
+
+```ruby
+__init__(
+    filenames_n_labels, 
+    num_epochs=1, 
+    batch_size=1, 
+    shuffle=None, 
+    input_fn=None, 
+    input_fn_params=None, 
+    normalizer_fn=None, 
+    augmentor_fn_list=None, 
+    augmentor_fn_params=None, 
+    num_threads=8
+)
+```
+
+Contstructs a `Tensorboard` instance visualizing TensorFlow training framework (e.g. loss graph, embeddings). 
+
+Args:  
+
+- **`log_dir`**: A string containing a directory in which to export timestamped (if available) model and its checkpoint. The sub-directories will be automatically created if not exist.
+
+- **`overwrite`**: An optional bool to overwrite all the previous checkpoint and saved models. 
+
+
+
 [Go to the Home Page]({{ site.url }}{{ site.baseurl }})
 
 Further Information: <dongyul.oh@snu.ac.kr>
