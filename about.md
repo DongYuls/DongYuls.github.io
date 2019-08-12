@@ -40,7 +40,7 @@ Journalist, University Student Supporters, Korea Youth Academic Conference, Kore
 
 <u>Dong Yul Oh</u>, Jihang Kim, and Kyong Joon Lee. "Longitudinal Change Detection on Chest X-rays using Geometric Correlation Maps." *The 22th International Conference on Medical Image Computing and Computer-Assisted Intervention*. 2019.
 
-<u>Dong Yul Oh</u>, Youngjune Kim, …, and Won Chang. "Low-Contrast Detectability of Image-based Denoising Algorithm using Deep Learning in CT: A 12-Reader Study Comparing with Advanced Modeled Iterative Reconstruction and Filtered Back Projection" *The 75th Korean Congress of Radiology*. 2019. 
+<u>Dong Yul Oh</u>, Youngjune Kim, …, and Won Chang. "Low-Contrast Detectability of Image-based Denoising Algorithm using Deep Learning in CT: A 12-Reader Study Comparing with Advanced Modeled Iterative Reconstruction and Filtered Back Projection" *The 105th Radiological Society of North America*. 2019. 
 
 Yejin Jeon, Kyeore Lee, <u>Dong Yul Oh</u>, …, and Leonard Sunwoo. "Impact of Bilateral Correlation Map on Diagnostic Accuracy of Maxillary Sinusitis on Convetional Radiograph using Deep Learning." *The 75th Korean Congress of Radiology*. 2019.
 
